@@ -1,0 +1,61 @@
+## Extreme-reference (female, Speaker=0019)
+Row: 2 models * 4
+Column: Reference=speech_id (female/male)
+
+1.
+F5-TTS
+F5-TTS + EG warm-start (Ours)
+
+2.
+F5-TTS + Flow-GRPO
+F5-TTS + EG warm-start + Flow-GRPO (Ours)
+
+3.
+F5-TTS + Dance-GRPO
+F5-TTS + EG warm-start + Dance-GRPO (Ours)
+
+4.
+F5-TTS + Flow-CPS
+F5-TTS + EG warm-start + Flow-CPS (Ours)
+
+
+## The effect of \alpha, \beta, and \weight
+### alpha (stage I)
+Row: alpha=0.7; alpha=0.5; alpha=0.3
+Column: Reference speech_id
+(Model: F5-TTS + EG warm-start)
+
+a3: Eg_a3b1_pPureVoiceLim_mean_range
+a5: Eg_a7b1_cps_a7g0002w5r121616_esdOnly_mr (temporary)
+
+### beta (stage I)
+Row: beta=1; beta=2; beta=3
+Column: Reference speech_id
+(Model: F5-TTS + EG warm-start)
+
+b1: Eg_a7b1_pPureVoiceLim_mean_range
+b3: Eg_a7b3_cps_a7g0002w5r121616c2_esd200_mr
+
+### weight (stage I  + II)
+Row: w=2,1; w=1,1; w=1:2
+Column: Reference speech_id
+(Model: F5-TTS + EG warm-start + Flow-CPS (Ours))
+
+w=21: Eg_a7b1_cps_a7g0002w5r221616_esd_mr
+w=12: Eg_a3b1_pPureVoiceLim_mean (temporary)
+
+
+The reference speech path for female and male are:
+audio/reference/0011Surprise_ref5_syn0.wav  -> "The nine the eggs, I keep."
+audio/reference/0019Surprise_ref47_syn7.wav -> "But one requires the explorer to furnish proofs."
+
+ref5: "Are you a regular darkey really?"
+ref47: "Hannibal come to see you."
+
+
+
+For other models: replace "reference" with "f5tts", "f5tts_cefm", "f5tts_sde", "f5tts_dan", "f5tts_cps"
+For other ablation models: replace "reference" with "f5tts_cefm_a03", "f5tts_cefm_a05", "f5tts_cefm_b1", "f5tts_cefm_b3", "f5tts_cefm_cps_w12", "f5tts_cefm_w21"
+
+
+
